@@ -24,6 +24,8 @@ public class Programa {
         // Imprimir na tela os dados dos livros
         System.out.println(
                 livro1.codigo + "\n" + livro1.titulo + "\n" + livro1.autores + "\n" + livro1.isbn + "\n" + livro1.ano);
-
+        System.out.println(
+                "\n" + livro2.codigo + "\n" + livro2.titulo + "\n" + livro2.autores + "\n" + livro2.isbn + "\n"
+                        + livro2.ano);
     }
 }
