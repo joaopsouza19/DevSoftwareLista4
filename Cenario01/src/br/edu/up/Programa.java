@@ -20,5 +20,10 @@ public class Programa {
         livro2.autores = "Harvey Deitel";
         livro2.isbn = "0130341517";
         livro2.ano = 2015;
+
+        // Imprimir na tela os dados dos livros
+        System.out.println(
+                livro1.codigo + "\n" + livro1.titulo + "\n" + livro1.autores + "\n" + livro1.isbn + "\n" + livro1.ano);
+
     }
 }
