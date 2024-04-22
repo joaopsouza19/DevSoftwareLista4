@@ -18,5 +18,7 @@ public class Programa {
         ponto1.setX(10);
         ponto1.setY(3);
 
+        double novaDistancia = ponto1.calcularDistancia(ponto2);
+        System.out.println("A distancia entre o ponto1 e ponto2 é: " + novaDistancia);
     }
 }
