@@ -9,5 +9,8 @@ public class Programa {
 
         Ponto ponto2 = new Ponto(2, 5);
 
+        double Distancia = ponto1.calcularDistancia(ponto2);
+        System.out.println(Distancia);
+
     }
 }
