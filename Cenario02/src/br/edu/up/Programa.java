@@ -10,7 +10,10 @@ public class Programa {
         Ponto ponto2 = new Ponto(2, 5);
 
         double Distancia = ponto1.calcularDistancia(ponto2);
-        System.out.println(Distancia);
+        System.out.println("A distancia entre o ponto1 e ponto2 é: " + Distancia);
+
+        double DistanciaPonto2 = ponto2.calcularDistancia(7, 2);
+        System.out.println("A distancia entre o ponto2 a X: 7, Y:2 é: " + DistanciaPonto2);
 
     }
 }
