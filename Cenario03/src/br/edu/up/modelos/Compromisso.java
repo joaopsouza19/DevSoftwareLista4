@@ -6,4 +6,10 @@ public class Compromisso {
     public String assunto;
     public int hora;
 
+    public Compromisso(String pessoa, String local, String assunto, int hora) {
+        this.pessoa = pessoa;
+        this.local = local;
+        this.assunto = assunto;
+        this.hora = hora;
+    }
 }
