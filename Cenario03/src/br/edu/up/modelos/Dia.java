@@ -14,8 +14,8 @@ public class Dia {
         if (hora >= 0 && hora < 24) {
             compromissos[hora] = comp;
         } else {
-            System.out.println("Hora inválida para adicionar compromisso.")
-        } 
+            System.out.println("Hora inválida para adicionar compromisso.");
+        }
     }
 
 }

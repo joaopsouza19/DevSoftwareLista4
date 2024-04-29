@@ -45,4 +45,8 @@ public class Compromisso {
         this.hora = hora;
     }
 
+    public String toString() {
+        return String.format("Compromisso: Pessoa=%s, Local=%s, Assunto=%s, Hora=%d", pessoa, local, assunto, hora);
+    }
+
 }
