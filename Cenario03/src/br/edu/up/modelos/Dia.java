@@ -7,7 +7,6 @@ public class Dia {
     public Dia(int diaMes) {
         this.diaMes = diaMes;
         this.compromissos = new Compromisso[24];
-        //
     }
 
     public void adicionarCompromisso(Compromisso comp) {
