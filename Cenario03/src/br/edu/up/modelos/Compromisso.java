@@ -1,10 +1,10 @@
 package br.edu.up.modelos;
 
 public class Compromisso {
-    public String pessoa;
-    public String local;
-    public String assunto;
-    public int hora;
+    private String pessoa;
+    private String local;
+    private String assunto;
+    private int hora;
 
     public Compromisso(String pessoa, String local, String assunto, int hora) {
         this.pessoa = pessoa;
@@ -45,6 +45,7 @@ public class Compromisso {
         this.hora = hora;
     }
 
+    @Override
     public String toString() {
         return String.format("Compromisso: Pessoa=%s, Local=%s, Assunto=%s, Hora=%d", pessoa, local, assunto, hora);
     }
