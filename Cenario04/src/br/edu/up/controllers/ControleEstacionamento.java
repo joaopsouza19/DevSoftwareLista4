@@ -1,19 +1,20 @@
-package br.edu.up.modelos;
+package br.edu.up.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
+import br.edu.up.models.Carro;
 
 public class ControleEstacionamento {
     private List<Carro> carrosEstacionados;
     private int vagasDisponiveis;
 
-    public ControleEstacionamento(int numeroVagas){
+    public ControleEstacionamento() {
         carrosEstacionados = new ArrayList<>();
-        vagasDisponiveis = numeroVagas;
+        vagasDisponiveis = 10; // Inicializa com 10 vagas disponíveis
     }
 
-    public void entradaCarro(Carro carro){
-        if (vagasDisponiveis > 0){
+    public void entradaCarro(Carro carro) {
+        if (vagasDisponiveis > 0) {
             carrosEstacionados.add(carro);
             vagasDisponiveis--;
             System.out.println("O carro foi estacionado com sucesso!");
@@ -22,10 +23,10 @@ public class ControleEstacionamento {
         }
     }
 
-    public void saidaCarro(String placa){
+    public void saidaCarro(String placa) {
         boolean encontrado = false;
-        for (Carro carro : carrosEstacionados){
-            if (carro.getPlaca().equals(placa)){
+        for (Carro carro : carrosEstacionados) {
+            if (carro.getPlaca().equals(placa)) {
                 carrosEstacionados.remove(carro);
                 vagasDisponiveis++;
                 encontrado = true;
@@ -33,14 +34,14 @@ public class ControleEstacionamento {
                 break;
             }
         }
-        if (!encontrado){
+        if (!encontrado) {
             System.out.println("O carro não foi encontrado no estacionamento.");
         }
     }
 
-    public void emitirRelatorio(){
+    public void emitirRelatorio() {
         System.out.println("O número de carros estacionados: " + carrosEstacionados.size());
         System.out.println("O número de vagas disponíveis: " + vagasDisponiveis);
-        System.out.println("O número de valor arrecadado: R$ " + (carrosEstacionados.size() * 5));
+        System.out.println("Valor arrecadado: R$ " + (carrosEstacionados.size() * 5));
     }
 }
