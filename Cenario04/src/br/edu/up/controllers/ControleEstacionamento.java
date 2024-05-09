@@ -7,10 +7,12 @@ import br.edu.up.models.Carro;
 public class ControleEstacionamento {
     private List<Carro> carrosEstacionados;
     private int vagasDisponiveis;
+    private int valorArrecadado;
 
     public ControleEstacionamento() {
         carrosEstacionados = new ArrayList<>();
         vagasDisponiveis = 10; 
+        valorArrecadado = 0; 
     }
 
     public void entradaCarro(Carro carro) {
@@ -29,6 +31,7 @@ public class ControleEstacionamento {
             if (carro.getPlaca().equals(placa)) {
                 carrosEstacionados.remove(carro);
                 vagasDisponiveis++;
+                valorArrecadado += 5; 
                 encontrado = true;
                 System.out.println("O carro foi retirado com sucesso!");
                 break;
@@ -42,6 +45,6 @@ public class ControleEstacionamento {
     public void emitirRelatorio() {
         System.out.println("O número de carros estacionados: " + carrosEstacionados.size());
         System.out.println("O número de vagas disponíveis: " + vagasDisponiveis);
-        System.out.println("Valor arrecadado: R$ " + (carrosEstacionados.size() * 5));
+        System.out.println("Valor arrecadado: R$ " + valorArrecadado);
     }
 }
