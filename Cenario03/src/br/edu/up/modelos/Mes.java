@@ -3,11 +3,13 @@ package br.edu.up.modelos;
 public class Mes {
     private int qtdeDias;
     private Dia[] dias;
+    private int mes;
 
-    public Mes(int qtdeDias) {
+    public Mes(int qtdeDias, int mes){
         this.qtdeDias = qtdeDias;
         this.dias = new Dia[qtdeDias];
-        for (int i = 0; i < qtdeDias; i++) {
+        this.mes = mes;
+        for (int i = 0; i < qtdeDias; i++){
             dias[i] = new Dia(i + 1);
         }
     }
@@ -37,11 +39,14 @@ public class Mes {
     }
 
     public void listarCompromissos(){
-        System.out.println("Compromissos do mês:");
+        System.out.println("Compromissos do mês " + mes + ":");
         for (int i = 0; i < qtdeDias; i++){
             System.out.println("Dia " + (i + 1) + ":");
             dias[i].listarCompromissos();
         }
     }
-    
+
+    public int getMes(){
+        return mes;
+    }
 }

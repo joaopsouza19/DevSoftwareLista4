@@ -6,48 +6,47 @@ public class Compromisso {
     private String assunto;
     private int hora;
 
-    public Compromisso(String pessoa, String local, String assunto, int hora) {
+    public Compromisso(String pessoa, String local, String assunto, int hora){
         this.pessoa = pessoa;
         this.local = local;
         this.assunto = assunto;
         this.hora = hora;
     }
 
-    public String getPessoa() {
+    public String getPessoa(){
         return pessoa;
     }
 
-    public void setPessoa(String pessoa) {
+    public void setPessoa(String pessoa){
         this.pessoa = pessoa;
     }
 
-    public String getLocal() {
+    public String getLocal(){
         return local;
     }
 
-    public void setLocal(String local) {
+    public void setLocal(String local){
         this.local = local;
     }
 
-    public String getAssunto() {
+    public String getAssunto(){
         return assunto;
     }
 
-    public void setAssunto(String assunto) {
+    public void setAssunto(String assunto){
         this.assunto = assunto;
     }
 
-    public int getHora() {
+    public int getHora(){
         return hora;
     }
 
-    public void setHora(int hora) {
+    public void setHora(int hora){
         this.hora = hora;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return String.format("Compromisso: Pessoa=%s, Local=%s, Assunto=%s, Hora=%d", pessoa, local, assunto, hora);
     }
-
 }

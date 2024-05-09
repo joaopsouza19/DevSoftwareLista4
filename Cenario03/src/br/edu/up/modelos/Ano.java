@@ -5,35 +5,36 @@ public class Ano {
     private boolean bissexto;
     private Mes[] meses;
 
-    public Ano(int ano, boolean bissexto) {
+    public Ano(int ano, boolean bissexto){
         this.ano = ano;
         this.bissexto = bissexto;
         this.meses = new Mes[12];
-        for (int i = 0; i < 12; i++) {
-            this.meses[i] = new Mes(diasNoMes(i + 1));
+        for (int i = 0; i < 12; i++){
+            this.meses[i] = new Mes(diasNoMes(i + 1), i + 1); 
         }
     }
 
-    public void adicionarMes(Mes mes) {
-        for (int i = 0; i < meses.length; i++) {
-            if (meses[i] == null) {
-                meses[i] = mes;
-                return;
-            }
+    public void adicionarMes(Mes mes){
+        int indiceMes = mes.getMes() - 1; 
+        if (indiceMes >= 0 && indiceMes < 12) {
+            meses[indiceMes] = mes;
+        } else {
+            System.out.println("Mês inválido.");
         }
-        System.out.println("Não foi possível adicionar o mês. O array de meses está cheio.");
     }
 
     public void excluirCompromisso(String nomeMes, int diaMes, int hora) {
         int indexMes = nomeParaIndiceMes(nomeMes);
-        if (indexMes != -1) {
+        if (indexMes != -1){
+            System.out.println("Excluindo compromisso do dia " + diaMes + " do mês " + nomeMes + " às " + hora + " horas.");
             meses[indexMes].excluirCompromisso(diaMes, hora);
+            System.out.println("Compromisso excluído com sucesso.");
         } else {
             System.out.println("Mês não encontrado.");
         }
     }
 
-    public void listarCompromissos(String nomeMes) {
+    public void listarCompromissos(String nomeMes){
         int indexMes = nomeParaIndiceMes(nomeMes);
         if (indexMes != -1) {
             meses[indexMes].listarCompromissos();
@@ -42,17 +43,17 @@ public class Ano {
         }
     }
 
-    public void listarCompromissos() {
-        for (int i = 0; i < 12; i++) {
+    public void listarCompromissos(){
+        for (int i = 0; i < 12; i++){
             meses[i].listarCompromissos();
         }
     }
 
-    private int diasNoMes(int mes) {
+    private int diasNoMes(int mes){
         return 30; 
     }
 
-    private int nomeParaIndiceMes(String nomeMes) {
+    private int nomeParaIndiceMes(String nomeMes){
         switch (nomeMes.toLowerCase()) {
             case "janeiro":
                 return 0;
