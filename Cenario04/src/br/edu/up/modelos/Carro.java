@@ -1,6 +1,6 @@
 package br.edu.up.modelos;
 
-class Carro {
+public class Carro {
     private String modelo;
     private String placa;
     private String cor;
