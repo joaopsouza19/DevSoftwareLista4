@@ -10,7 +10,7 @@ public class ControleEstacionamento {
 
     public ControleEstacionamento() {
         carrosEstacionados = new ArrayList<>();
-        vagasDisponiveis = 10; // Inicializa com 10 vagas disponíveis
+        vagasDisponiveis = 10; 
     }
 
     public void entradaCarro(Carro carro) {
