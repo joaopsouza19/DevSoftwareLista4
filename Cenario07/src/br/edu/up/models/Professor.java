@@ -13,10 +13,6 @@ public class Professor {
         this.titulacao = titulacao;
     }
 
-    public Professor(String nome2, String rg2, String identificacaoCurriculoLattes2) {
-        //TODO Auto-generated constructor stub
-    }
-
     public String getNome(){
         return nome;
     }
