@@ -18,8 +18,9 @@ public class IUsuario {
         System.out.println("4. Adicionar aeronave");
         System.out.println("5. Listar passageiros");
         System.out.println("6. Listar tripulação");
-        System.out.println("7. Listar aeronaves");
-        System.out.println("8. Sair");
+        System.out.println("7. Listar comissários");
+        System.out.println("8. Listar aeronaves");
+        System.out.println("9. Sair");
     }
 
     public String lerString(String prompt) {
