@@ -5,26 +5,26 @@ public class Aeronave {
     private String tipo;
     private int quantidadeAssentos;
 
-    public Aeronave(String codigo, String tipo, int quantidadeAssentos) {
+    public Aeronave(String codigo, String tipo, int quantidadeAssentos){
         this.codigo = codigo;
         this.tipo = tipo;
         this.quantidadeAssentos = quantidadeAssentos;
     }
 
-    public String getCodigo() {
+    public String getCodigo(){
         return codigo;
     }
 
-    public String getTipo() {
+    public String getTipo(){
         return tipo;
     }
 
-    public int getQuantidadeAssentos() {
+    public int getQuantidadeAssentos(){
         return quantidadeAssentos;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return "Código: " + codigo + ", Tipo: " + tipo + ", Quantidade de Assentos: " + quantidadeAssentos;
     }
 }

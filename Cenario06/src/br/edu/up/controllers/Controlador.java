@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Controlador {
     private IUsuario view;
     private List<Passageiro> passageiros;
@@ -13,7 +14,7 @@ public class Controlador {
     private List<Comissario> comissarios;
     private List<Aeronave> aeronaves;
 
-    public Controlador(IUsuario view) {
+    public Controlador(IUsuario view){
         this.view = view;
         this.passageiros = new ArrayList<>();
         this.comandantes = new ArrayList<>();
@@ -21,19 +22,19 @@ public class Controlador {
         this.aeronaves = new ArrayList<>();
     }
 
-    public void adicionarPassageiro() {
+    public void adicionarPassageiro(){
         String nome = view.lerString("Nome do passageiro: ");
         String rg = view.lerString("RG do passageiro: ");
         String identificadorBagagem = view.lerString("Identificador de bagagem: ");
         int numeroAssento = view.lerInt("Número do assento: ");
         String classeAssento = view.lerString("Classe do assento: ");
-        LocalDateTime dataVoo = LocalDateTime.now(); // Supondo que a data do voo seja a data atual
+        LocalDateTime dataVoo = LocalDateTime.now();
         Passageiro passageiro = new Passageiro(nome, rg, identificadorBagagem, new Passagem(numeroAssento, classeAssento, dataVoo));
         passageiros.add(passageiro);
         view.mostrarMensagem("Passageiro adicionado com sucesso!");
     }
 
-    public void adicionarComandante() {
+    public void adicionarComandante(){
         String nome = view.lerString("Nome do comandante: ");
         String rg = view.lerString("RG do comandante: ");
         String identificacaoAeronautica = view.lerString("Identificação aeronáutica: ");
@@ -44,7 +45,7 @@ public class Controlador {
         view.mostrarMensagem("Comandante adicionado com sucesso!");
     }
 
-    public void adicionarComissario() {
+    public void adicionarComissario(){
         String nome = view.lerString("Nome do comissário: ");
         String rg = view.lerString("RG do comissário: ");
         String identificacaoAeronautica = view.lerString("Identificação aeronáutica: ");
@@ -53,7 +54,7 @@ public class Controlador {
         int opcao;
         do {
             String idioma = view.lerString("Idioma de fluência (ou 'fim' para encerrar): ");
-            if (idioma.equalsIgnoreCase("fim")) {
+            if (idioma.equalsIgnoreCase("fim")){
                 break;
             }
             idiomasFluencia.add(idioma);
@@ -64,7 +65,7 @@ public class Controlador {
         view.mostrarMensagem("Comissário adicionado com sucesso!");
     }
 
-    public void adicionarAeronave() {
+    public void adicionarAeronave(){
         String codigo = view.lerString("Código da aeronave: ");
         String tipo = view.lerString("Tipo da aeronave: ");
         int quantidadeAssentos = view.lerInt("Quantidade de assentos da aeronave: ");
@@ -73,28 +74,28 @@ public class Controlador {
         view.mostrarMensagem("Aeronave adicionada com sucesso!");
     }
 
-    public void listarPassageiros() {
+    public void listarPassageiros(){
         view.mostrarLista(passageiros);
     }
 
-    public void listarComandantes() {
+    public void listarComandantes(){
         view.mostrarLista(comandantes);
     }
 
-    public void listarComissarios() {
+    public void listarComissarios(){
         view.mostrarLista(comissarios);
     }
 
-    public void listarAeronaves() {
+    public void listarAeronaves(){
         view.mostrarLista(aeronaves);
     }
 
-    public void iniciar() {
-        while (true) {
+    public void iniciar(){
+        while (true){
             view.mostrarMenu();
             int opcao = view.lerInt("Opção: ");
     
-            switch (opcao) {
+            switch (opcao){
                 case 1:
                     adicionarPassageiro();
                     break;

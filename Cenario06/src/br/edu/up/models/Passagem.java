@@ -7,26 +7,26 @@ public class Passagem {
     private String classeAssento;
     private LocalDateTime dataVoo;
 
-    public Passagem(int numeroAssento, String classeAssento, LocalDateTime dataVoo) {
+    public Passagem(int numeroAssento, String classeAssento, LocalDateTime dataVoo){
         this.numeroAssento = numeroAssento;
         this.classeAssento = classeAssento;
         this.dataVoo = dataVoo;
     }
 
-    public int getNumeroAssento() {
+    public int getNumeroAssento(){
         return numeroAssento;
     }
 
-    public String getClasseAssento() {
+    public String getClasseAssento(){
         return classeAssento;
     }
 
-    public LocalDateTime getDataVoo() {
+    public LocalDateTime getDataVoo(){
         return dataVoo;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return "Número de Assento: " + numeroAssento + ", Classe de Assento: " + classeAssento + ", Data do Voo: " + dataVoo;
     }
 }

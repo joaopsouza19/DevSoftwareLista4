@@ -2,44 +2,45 @@ package br.edu.up.view;
 
 import java.util.List;
 import java.util.Scanner;
+import br.edu.up.Prompt;
 
 public class IUsuario {
     private Scanner scanner;
 
-    public IUsuario() {
+    public IUsuario(){
         this.scanner = new Scanner(System.in);
     }
 
-    public void mostrarMenu() {
-        System.out.println("Selecione uma opção:");
-        System.out.println("1. Adicionar passageiro");
-        System.out.println("2. Adicionar comandante");
-        System.out.println("3. Adicionar comissário");
-        System.out.println("4. Adicionar aeronave");
-        System.out.println("5. Listar passageiros");
-        System.out.println("6. Listar tripulação");
-        System.out.println("7. Listar comissários");
-        System.out.println("8. Listar aeronaves");
-        System.out.println("9. Sair");
+    public void mostrarMenu(){
+        Prompt.imprimir("Selecione uma opção:");
+        Prompt.imprimir("1. Adicionar passageiro");
+        Prompt.imprimir("2. Adicionar comandante");
+        Prompt.imprimir("3. Adicionar comissário");
+        Prompt.imprimir("4. Adicionar aeronave");
+        Prompt.imprimir("5. Listar passageiros");
+        Prompt.imprimir("6. Listar tripulação");
+        Prompt.imprimir("7. Listar comissários");
+        Prompt.imprimir("8. Listar aeronaves");
+        Prompt.imprimir("9. Sair");
     }
 
-    public String lerString(String prompt) {
-        System.out.print(prompt);
+    public String lerString(String prompt){
+        Prompt.imprimir(prompt);
         return scanner.nextLine();
     }
 
-    public int lerInt(String prompt) {
-        System.out.print(prompt);
+    public int lerInt(String prompt){
+        Prompt.imprimir(prompt);
         return Integer.parseInt(scanner.nextLine());
     }
 
-    public void mostrarMensagem(String mensagem) {
-        System.out.println(mensagem);
+    public void mostrarMensagem(String mensagem){
+        Prompt.imprimir(mensagem);
     }
 
-    public void mostrarLista(List<?> lista) {
-        for (Object item : lista) {
-            System.out.println(item);
+    public void mostrarLista(List<?> lista){
+        for (Object item : lista){
+            Prompt.imprimir(item);
         }
     }
 }

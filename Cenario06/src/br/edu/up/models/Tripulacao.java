@@ -4,22 +4,22 @@ public class Tripulacao extends Pessoa {
     private String identificacaoAeronautica;
     private String matriculaFuncionario;
 
-    public Tripulacao(String nome, String rg, String identificacaoAeronautica, String matriculaFuncionario) {
+    public Tripulacao(String nome, String rg, String identificacaoAeronautica, String matriculaFuncionario){
         super(nome, rg);
         this.identificacaoAeronautica = identificacaoAeronautica;
         this.matriculaFuncionario = matriculaFuncionario;
     }
 
-    public String getIdentificacaoAeronautica() {
+    public String getIdentificacaoAeronautica(){
         return identificacaoAeronautica;
     }
 
-    public String getMatriculaFuncionario() {
+    public String getMatriculaFuncionario(){
         return matriculaFuncionario;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return super.toString() + ", Identificação Aeronáutica: " + identificacaoAeronautica + ", Matrícula do Funcionário: " + matriculaFuncionario;
     }
 }

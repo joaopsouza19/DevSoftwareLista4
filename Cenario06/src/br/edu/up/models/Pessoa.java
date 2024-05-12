@@ -4,21 +4,21 @@ public class Pessoa {
     private String nome;
     private String rg;
 
-    public Pessoa(String nome, String rg) {
+    public Pessoa(String nome, String rg){
         this.nome = nome;
         this.rg = rg;
     }
 
-    public String getNome() {
+    public String getNome(){
         return nome;
     }
 
-    public String getRg() {
+    public String getRg(){
         return rg;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return "Nome: " + nome + ", RG: " + rg;
     }
 }
