@@ -8,7 +8,7 @@ public class Evento {
     private int ingressosVendidos;
     private double precoIngresso;
 
-    public Evento(String nome, String data, String local, int lotacaoMaxima, int ingressosVendidos, double precoIngresso) {
+    public Evento(String nome, String data, String local, int lotacaoMaxima, int ingressosVendidos, double precoIngresso){
         this.nome = nome;
         this.data = data;
         this.local = local;
@@ -17,56 +17,56 @@ public class Evento {
         this.precoIngresso = precoIngresso;
     }
 
-    public String getNome() {
+    public String getNome(){
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome){
         this.nome = nome;
     }
 
-    public String getData() {
+    public String getData(){
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(String data){
         this.data = data;
     }
 
-    public String getLocal() {
+    public String getLocal(){
         return local;
     }
 
-    public void setLocal(String local) {
+    public void setLocal(String local){
         this.local = local;
     }
 
-    public int getLotacaoMaxima() {
+    public int getLotacaoMaxima(){
         return lotacaoMaxima;
     }
 
-    public void setLotacaoMaxima(int lotacaoMaxima) {
+    public void setLotacaoMaxima(int lotacaoMaxima){
         this.lotacaoMaxima = lotacaoMaxima;
     }
 
-    public int getIngressosVendidos() {
+    public int getIngressosVendidos(){
         return ingressosVendidos;
     }
 
-    public void setIngressosVendidos(int ingressosVendidos) {
+    public void setIngressosVendidos(int ingressosVendidos){
         this.ingressosVendidos = ingressosVendidos;
     }
 
-    public double getPrecoIngresso() {
+    public double getPrecoIngresso(){
         return precoIngresso;
     }
 
-    public void setPrecoIngresso(double precoIngresso) {
+    public void setPrecoIngresso(double precoIngresso){
         this.precoIngresso = precoIngresso;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return "Evento [nome=" + nome + ", data=" + data + ", local=" + local + ", lotacaoMaxima=" + lotacaoMaxima
                 + ", ingressosVendidos=" + ingressosVendidos + ", precoIngresso=" + precoIngresso + "]";
     }

@@ -9,18 +9,18 @@ public class Controlador {
     private List<Evento> eventos;
     private List<Reserva> reservas;
 
-    public Controlador(IUsuario view, List<Evento> eventos, List<Reserva> reservas) {
+    public Controlador(IUsuario view, List<Evento> eventos, List<Reserva> reservas){
         this.view = view;
         this.eventos = eventos;
         this.reservas = reservas;
     }
 
-    public void iniciar() {
+    public void iniciar(){
         while (true) {
             view.mostrarMenu();
             String opcao = view.obterOpcao();
 
-            switch (opcao) {
+            switch (opcao){
                 case "1":
                     Evento novoEvento = view.lerEvento();
                     eventos.add(novoEvento);

@@ -3,6 +3,7 @@ package br.edu.up.view;
 import java.util.List;
 import java.util.Scanner;
 import br.edu.up.models.*;
+import br.edu.up.Prompt;
 
 public class IUsuario {
     private Scanner scanner;
@@ -11,64 +12,64 @@ public class IUsuario {
         this.scanner = new Scanner(System.in);
     }
 
-    public void mostrarMenu() {
-        System.out.println("1 -> Adicionar evento");
-        System.out.println("2 -> Listar eventos");
-        System.out.println("3 -> Adicionar reserva");
-        System.out.println("4 -> Listar reservas");
-        System.out.println("5 -> Sair");
+    public void mostrarMenu(){
+        Prompt.imprimir("1 -> Adicionar evento");
+        Prompt.imprimir("2 -> Listar eventos");
+        Prompt.imprimir("3 -> Adicionar reserva");
+        Prompt.imprimir("4 -> Listar reservas");
+        Prompt.imprimir("5 -> Sair");
     }
 
-    public Evento lerEvento() {
-        System.out.print("Nome do evento: ");
+    public Evento lerEvento(){
+        Prompt.imprimir("Nome do evento: ");
         String nome = scanner.nextLine();
-        System.out.print("Data do evento: ");
+        Prompt.imprimir("Data do evento: ");
         String data = scanner.nextLine();
-        System.out.print("Local do evento: ");
+        Prompt.imprimir("Local do evento: ");
         String local = scanner.nextLine();
-        System.out.print("Lotação máxima do evento: ");
+        Prompt.imprimir("Lotação máxima do evento: ");
         int lotacaoMaxima = Integer.parseInt(scanner.nextLine());
-        System.out.print("Quantidade de ingressos vendidos: ");
+        Prompt.imprimir("Quantidade de ingressos vendidos: ");
         int ingressosVendidos = Integer.parseInt(scanner.nextLine());
-        System.out.print("Preço do ingresso: ");
+        Prompt.imprimir("Preço do ingresso: ");
         double precoIngresso = Double.parseDouble(scanner.nextLine());
         return new Evento(nome, data, local, lotacaoMaxima, ingressosVendidos, precoIngresso);
     }
 
-    public Reserva lerReserva() {
-        System.out.print("Nome do evento da reserva: ");
+    public Reserva lerReserva(){
+        Prompt.imprimir("Nome do evento da reserva: ");
         String nomeEvento = scanner.nextLine();
-        System.out.print("Responsável pela reserva: ");
+        Prompt.imprimir("Responsável pela reserva: ");
         String responsavel = scanner.nextLine();
-        System.out.print("Quantidade de pessoas: ");
+        Prompt.imprimir("Quantidade de pessoas: ");
         int quantidadePessoas = Integer.parseInt(scanner.nextLine());
-        System.out.print("Data da reserva: ");
+        Prompt.imprimir("Data da reserva: ");
         String dataReserva = scanner.nextLine();
-        System.out.print("Valor total da reserva: ");
+        Prompt.imprimir("Valor total da reserva: ");
         double valorTotal = Double.parseDouble(scanner.nextLine());
         return new Reserva(nomeEvento, responsavel, quantidadePessoas, dataReserva, valorTotal);
     }
 
-    public void mostrarEventos(List<Evento> eventos) {
-        System.out.println("--- Eventos ---");
+    public void mostrarEventos(List<Evento> eventos){
+        Prompt.imprimir("--- Eventos ---");
         for (Evento evento : eventos) {
-            System.out.println(evento);
+            Prompt.imprimir(evento);
         }
     }
 
-    public void mostrarReservas(List<Reserva> reservas) {
-        System.out.println("--- Reservas ---");
+    public void mostrarReservas(List<Reserva> reservas){
+        Prompt.imprimir("--- Reservas ---");
         for (Reserva reserva : reservas) {
-            System.out.println(reserva);
+            Prompt.imprimir(reserva);
         }
     }
 
-    public void mostrarMensagem(String mensagem) {
-        System.out.println(mensagem);
+    public void mostrarMensagem(String mensagem){
+        Prompt.imprimir(mensagem);
     }
 
-    public String obterOpcao() {
-        System.out.print("Escolha uma opção: ");
+    public String obterOpcao(){
+        Prompt.imprimir("Escolha uma opção: ");
         return scanner.nextLine();
     }
 }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Program {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         IUsuario view = new IUsuario();
         List<Evento> eventos = new ArrayList<>();
         List<Reserva> reservas = new ArrayList<>();
