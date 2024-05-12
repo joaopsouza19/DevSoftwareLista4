@@ -59,7 +59,7 @@ public class Controlador {
         String rg = usuario.lerString("RG do professor: ");
         String identificacaoCurriculoLattes = usuario.lerString("Identificação do currículo Lattes: ");
       
-        Professor professor = new Professor(nome, rg, identificacaoCurriculoLattes);
+        Professor professor = new Professor(nome, rg, identificacaoCurriculoLattes, null);
         professores.add(professor);
         usuario.mostrarMensagem("Professor adicionado com sucesso!");
     }

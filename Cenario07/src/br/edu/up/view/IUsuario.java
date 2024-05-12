@@ -1,8 +1,12 @@
 package br.edu.up.view;
 
+import java.util.List;
 import java.util.Scanner;
 
 import br.edu.up.Prompt;
+import br.edu.up.models.Aluno;
+import br.edu.up.models.Disciplina;
+import br.edu.up.models.Professor;
 
 
 public class IUsuario {
@@ -31,6 +35,26 @@ public class IUsuario {
     public int lerInt(String mensagem){
         Prompt.imprimir(mensagem);
         return Integer.parseInt(scanner.nextLine());
+    }
+
+    public void mostrarAlunos(List<Aluno> alunos) {
+ 
+        throw new UnsupportedOperationException("Unimplemented method 'mostrarAlunos'");
+    }
+
+    public void mostrarProfessores(List<Professor> professores) {
+ 
+        throw new UnsupportedOperationException("Unimplemented method 'mostrarProfessores'");
+    }
+
+    public void mostrarMensagem(String string) {
+ 
+        throw new UnsupportedOperationException("Unimplemented method 'mostrarMensagem'");
+    }
+
+    public void mostrarDisciplinas(List<Disciplina> disciplinas) {
+ 
+        throw new UnsupportedOperationException("Unimplemented method 'mostrarDisciplinas'");
     }
 
 }
