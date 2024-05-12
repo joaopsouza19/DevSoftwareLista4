@@ -1,16 +1,26 @@
 package br.edu.up.models;
 
 public class Reserva {
+    private String nomeEvento;
     private String responsavel;
-    private int quantidadePessoa;
+    private int quantidadePessoas;
     private String dataReserva;
     private double valorTotal;
 
-    public Reserva(String responsavel, int quantidadePessoa, String dataReserva, double valorTotal) {
+    public Reserva(String nomeEvento, String responsavel, int quantidadePessoas, String dataReserva, double valorTotal) {
+        this.nomeEvento = nomeEvento;
         this.responsavel = responsavel;
-        this.quantidadePessoa = quantidadePessoa;
+        this.quantidadePessoas = quantidadePessoas;
         this.dataReserva = dataReserva;
         this.valorTotal = valorTotal;
+    }
+
+    public String getNomeEvento() {
+        return nomeEvento;
+    }
+
+    public void setNomeEvento(String nomeEvento) {
+        this.nomeEvento = nomeEvento;
     }
 
     public String getResponsavel() {
@@ -21,12 +31,12 @@ public class Reserva {
         this.responsavel = responsavel;
     }
 
-    public int getquantidadePessoa() {
-        return quantidadePessoa;
+    public int getQuantidadePessoas() {
+        return quantidadePessoas;
     }
 
-    public void setquantidadePessoa(int quantidadePessoa) {
-        this.quantidadePessoa = quantidadePessoa;
+    public void setQuantidadePessoas(int quantidadePessoas) {
+        this.quantidadePessoas = quantidadePessoas;
     }
 
     public String getDataReserva() {
@@ -45,6 +55,8 @@ public class Reserva {
         this.valorTotal = valorTotal;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Reserva [nomeEvento=" + nomeEvento + ", responsavel=" + responsavel + ", quantidadePessoas=" + quantidadePessoas + ", dataReserva=" + dataReserva + ", valorTotal=" + valorTotal + "]";
+    }
 }
-

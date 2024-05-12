@@ -5,15 +5,15 @@ public class Evento {
     private String data;
     private String local;
     private int lotacaoMaxima;
-    private int ingressoVendido;
+    private int ingressosVendidos;
     private double precoIngresso;
 
-    public Evento(String nome, String data, String local, int lotacaoMaxima, int ingressoVendido, double precoIngresso) {
+    public Evento(String nome, String data, String local, int lotacaoMaxima, int ingressosVendidos, double precoIngresso) {
         this.nome = nome;
         this.data = data;
         this.local = local;
         this.lotacaoMaxima = lotacaoMaxima;
-        this.ingressoVendido = ingressoVendido;
+        this.ingressosVendidos = ingressosVendidos;
         this.precoIngresso = precoIngresso;
     }
 
@@ -49,12 +49,12 @@ public class Evento {
         this.lotacaoMaxima = lotacaoMaxima;
     }
 
-    public int getingressoVendido() {
-        return ingressoVendido;
+    public int getIngressosVendidos() {
+        return ingressosVendidos;
     }
 
-    public void setingressoVendido(int ingressoVendido) {
-        this.ingressoVendido = ingressoVendido;
+    public void setIngressosVendidos(int ingressosVendidos) {
+        this.ingressosVendidos = ingressosVendidos;
     }
 
     public double getPrecoIngresso() {
@@ -65,5 +65,9 @@ public class Evento {
         this.precoIngresso = precoIngresso;
     }
 
+    @Override
+    public String toString() {
+        return "Evento [nome=" + nome + ", data=" + data + ", local=" + local + ", lotacaoMaxima=" + lotacaoMaxima
+                + ", ingressosVendidos=" + ingressosVendidos + ", precoIngresso=" + precoIngresso + "]";
+    }
 }
-
