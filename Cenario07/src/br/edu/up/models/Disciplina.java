@@ -19,6 +19,10 @@ public class Disciplina {
         this.competencias = competencias;
     }
 
+    public Disciplina(String nome2, int identificador2, String curriculo2) {
+        //TODO Auto-generated constructor stub
+    }
+
     public String getNome(){
         return nome;
     }
