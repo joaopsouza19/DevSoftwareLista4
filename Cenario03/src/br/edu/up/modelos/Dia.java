@@ -6,12 +6,12 @@ public class Dia {
     private int diaMes;
     private Compromisso[] compromissos;
 
-    public Dia(int diaMes) {
+    public Dia(int diaMes){
         this.diaMes = diaMes;
         this.compromissos = new Compromisso[24];
     }
 
-    public void adicionarCompromisso(Compromisso comp) {
+    public void adicionarCompromisso(Compromisso comp){
         int hora = comp.getHora();
         if (hora >= 0 && hora < 24) {
             compromissos[hora] = comp;
@@ -20,7 +20,7 @@ public class Dia {
         }
     }
 
-    public Compromisso consultarCompromisso(int hora) {
+    public Compromisso consultarCompromisso(int hora){
         if (hora >= 0 && hora < 24) {
             return compromissos[hora];
         } else {
@@ -29,9 +29,9 @@ public class Dia {
         }
     }
 
-    public void excluirCompromisso(int hora) {
-        if (hora >= 0 && hora < 24) {
-            if (compromissos[hora] != null) {
+    public void excluirCompromisso(int hora){
+        if (hora >= 0 && hora < 24){
+            if (compromissos[hora] != null){
                 Prompt.imprimir("Excluindo compromisso às " + hora + " horas: " + compromissos[hora].toString());
                 compromissos[hora] = null;
                 Prompt.imprimir("Compromisso excluído com sucesso.");
@@ -43,10 +43,10 @@ public class Dia {
         }
     }
 
-    public void listarCompromissos() {
+    public void listarCompromissos(){
         Prompt.imprimir("Compromissos do dia " + diaMes + ":");
-        for (int i = 0; i < 24; i++) {
-            if (compromissos[i] != null) {
+        for (int i = 0; i < 24; i++){
+            if (compromissos[i] != null){
                 Prompt.imprimir(i + "h: " + compromissos[i].toString());
             }
         }

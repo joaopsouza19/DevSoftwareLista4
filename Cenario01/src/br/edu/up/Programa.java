@@ -5,7 +5,7 @@ import br.edu.up.Prompt;
 
 public class Programa {
 
-        public static void main(String[] args) {
+        public static void main(String[] args){
 
                 Livro livro1 = new Livro();
                 livro1.setCodigo("1598FHK");
@@ -21,10 +21,7 @@ public class Programa {
                 livro2.setIsbn("0130341517");
                 livro2.setAno(2015);
 
-                Prompt.imprimir(livro1.getCodigo() + "\n" + livro1.getTitulo() + "\n" + livro1.getAutores() + "\n" + livro1.getIsbn()
-                                + "\n" + livro1.getAno());
-                Prompt.imprimir("\n" + livro2.getCodigo() + "\n" + livro2.getTitulo() + "\n" + livro2.getAutores() + "\n"
-                                + livro2.getIsbn() + "\n" + livro2.getAno());
+                Prompt.imprimir(livro1.getCodigo() + "\n" + livro1.getTitulo() + "\n" + livro1.getAutores() + "\n" + livro1.getIsbn() + "\n" + livro1.getAno());
+                Prompt.imprimir("\n" + livro2.getCodigo() + "\n" + livro2.getTitulo() + "\n" + livro2.getAutores() + "\n" + livro2.getIsbn() + "\n" + livro2.getAno());
         }
 }
-// pedro

@@ -4,7 +4,7 @@ import br.edu.up.modelos.Ponto;
 import br.edu.up.Prompt;
 
 public class Programa {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         Ponto ponto1 = new Ponto();
 
