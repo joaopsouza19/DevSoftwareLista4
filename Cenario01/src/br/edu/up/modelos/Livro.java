@@ -1,11 +1,11 @@
 package br.edu.up.modelos;
 
 public class Livro {
-    public String codigo;
-    public String titulo;
-    public String autores;
-    public String isbn;
-    public int ano;
+    private String codigo;
+    private String titulo;
+    private String autores;
+    private String isbn;
+    private int ano;
 
     public String getCodigo() {
         return codigo;
@@ -46,5 +46,6 @@ public class Livro {
     public void setAno(int ano) {
         this.ano = ano;
     }
+    
 
 }
