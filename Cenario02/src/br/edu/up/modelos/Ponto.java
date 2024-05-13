@@ -1,8 +1,8 @@
 package br.edu.up.modelos;
 
 public class Ponto {
-    public double x;
-    public double y;
+    private double x;
+    private double y;
 
     public double getX() {
         return x;
