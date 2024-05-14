@@ -1,5 +1,6 @@
 package br.edu.up.view;
 
+import br.edu.up.Prompt;
 import java.util.Scanner;
 
 public class IUsuario {
@@ -10,40 +11,40 @@ public class IUsuario {
     }
 
     public int exibirMenu() {
-        System.out.println("Menu:");
-        System.out.println("1. Incluir um contato pessoal");
-        System.out.println("2. Incluir um contato comercial");
-        System.out.println("3. Excluir um contato pelo código");
-        System.out.println("4. Consultar um contato pelo código");
-        System.out.println("5. Listar todos os contatos");
-        System.out.println("6. Sair do programa");
-        System.out.print("Escolha uma opção: ");
+        Prompt.imprimir("Menu:");
+        Prompt.imprimir("1. Incluir um contato pessoal");
+        Prompt.imprimir("2. Incluir um contato comercial");
+        Prompt.imprimir("3. Excluir um contato pelo código");
+        Prompt.imprimir("4. Consultar um contato pelo código");
+        Prompt.imprimir("5. Listar todos os contatos");
+        Prompt.imprimir("6. Sair do programa");
+        Prompt.imprimir("Escolha uma opção: ");
         return scanner.nextInt();
     }
 
     public int lerCodigo() {
-        System.out.print("Digite o código do contato: ");
+        Prompt.imprimir("Digite o código do contato: ");
         return scanner.nextInt();
     }
 
     public String lerNome() {
-        System.out.print("Digite o nome do contato: ");
+        Prompt.imprimir("Digite o nome do contato: ");
         scanner.nextLine();
         return scanner.nextLine();
     }
 
     public String lerTelefone() {
-        System.out.print("Digite o telefone do contato: ");
+        Prompt.imprimir("Digite o telefone do contato: ");
         return scanner.nextLine();
     }
 
     public String lerAniversario() {
-        System.out.print("Digite o aniversário (DD/MM/YYYY): ");
+        Prompt.imprimir("Digite o aniversário (DD/MM/YYYY): ");
         return scanner.nextLine();
     }
 
     public String lerCnpj() {
-        System.out.print("Digite o CNPJ do contato comercial: ");
+        Prompt.imprimir("Digite o CNPJ do contato comercial: ");
         return scanner.nextLine();
     }
 

@@ -1,6 +1,7 @@
 package br.edu.up.controllers;
 
 import br.edu.up.models.*;
+import br.edu.up.Prompt;
 import br.edu.up.view.IUsuario;
 
 public class Controlador {
@@ -34,20 +35,20 @@ public class Controlador {
                     int codigo4 = menu.lerCodigo();
                     Contato contato = agenda.getContato(codigo4);
                     if (contato != null) {
-                        System.out.println("Contato encontrado:\n" + contato);
+                        Prompt.imprimir("Contato encontrado:\n" + contato);
                     } else {
-                        System.out.println("Contato não encontrado.");
+                        Prompt.imprimir("Contato não encontrado.");
                     }
                     break;
                 case 5:
-                    System.out.println("Lista de Contatos:");
-                    System.out.println(agenda.listarContatos());
+                    Prompt.imprimir("Lista de Contatos:");
+                    Prompt.imprimir(agenda.listarContatos());
                     break;
                 case 6:
-                    System.out.println("Saindo...");
+                    Prompt.imprimir("Saindo...");
                     break;
                 default:
-                    System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
+                    Prompt.imprimir("Opção inválida. Por favor, escolha uma opção válida.");
             }
         } while (opcao != 6);
 
